@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./styles.css" rel="stylesheet">
+    <link rel="preload" as="image" href="./Images/nicolas-jehly-0p37Ch2LYQc-unsplash.jpg">
 </head>
 <body>
     <section class="heroimg">
-        <img src="./nicolas-jehly-0p37Ch2LYQc-unsplash.jpg" alt="A small city picture far away with skyscrapers and surrounded by water">
+        <img src="./Images/nicolas-jehly-0p37Ch2LYQc-unsplash.jpg" alt="A small city picture far away with skyscrapers and surrounded by water">
         <div id="hero">
             <h1>SIM Group</h1>
             <h3>Sustainable Infrastructure Materials Lab</h3>
@@ -16,6 +17,11 @@
     </section>
     <section>
         <div class="container" id="navbar">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="navlinks">
                 <a href="./index.html">Home</a>
                 <a href="./thrusts.html">Thrusts</a>
@@ -25,7 +31,7 @@
                 <a href="opportunities.html">Opportunities</a>
             </div>
             <div class="navscroll">
-                <img src="./down arrow.svg" alt="An arrow pointing down">
+                <a href="#footer"><img src="./Images/down arrow.svg" alt="An arrow pointing down"></a>
             </div>
         </div>
     </section>
@@ -33,9 +39,23 @@
         <div class="container">
             <div id="home">    
                 <h2>HOME</h2>
-                <p>Our research centres around sustainable and smart-resilient buildings/civil infrastructure with a particular interest in decarbonizing infrastructure using novel low-carbon construction materials and alternative energy sources. <br> <br>Buildings contribute to more than one-third (39%) of the global energy-related CO2 emissions and 35% of global energy consumption, mainly from manufacturing, building materials and transportation. As such, advanced research on developing innovative construction materials is urgently required to address the carbon emissions from materials and construction processes of buildings' life cycle. His research approach includes examining the fresh properties and rheology, early-age cracking, microstructure evaluation, mechanical and durability performance, and life cycle assessment of building systems (particularly cementitious composites) made with these sustainable construction materials. <br> <br> The Group is led by <a href="https://bc.gatech.edu/people/ebenezer-fanijo"><strong>Dr Ebenezer Fanijo</strong></strong></a></p>
+                <p>Our research centres around sustainable and smart-resilient buildings/civil infrastructure with a particular interest in decarbonizing infrastructure using novel low-carbon construction materials and alternative energy sources. <br> <br>Buildings contribute to more than one-third (39%) of the global energy-related CO2 emissions and 35% of global energy consumption, mainly from manufacturing, building materials and transportation. As such, advanced research on developing innovative construction materials is urgently required to address the carbon emissions from materials and construction processes of buildings' life cycle. Our research approach includes examining the fresh properties and rheology, early-age cracking, microstructure evaluation, mechanical and durability performance, and life cycle assessment of building systems (particularly cementitious composites) made with these sustainable construction materials. <br> <br> The Group is led by <a href="https://bc.gatech.edu/people/ebenezer-fanijo"><strong>Dr Ebenezer Fanijo</strong></strong></a></p>
             </div>
         </div>
     </section>
+    <div id="footer"></div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.navlinks');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+    });
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.navlinks a {
+.navlinks > a {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -112,6 +112,9 @@ a {
 }
 .thrust {
     width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .thrust > p {
     text-align: justify;
@@ -122,5 +125,347 @@ a {
     padding-bottom: 0%;
 }
 .thrust > h3 {
+    height: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 350;
+    width: 80%;
+    text-align: center;
+}
+.thrustpublications > p > a {
+    text-decoration: underline;
+    color: rgb(94, 163, 242);
+}
+.funding {
+    text-align: justify;
+    font-weight: 100;
+    word-spacing: 0.5rem;
+    margin-top: 2rem;
+}
+#pubdiv {
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    justify-content: space-between;
+}
+.pub{
+    padding: 1rem;
+    background-color: rgb(244, 247, 252);
+    margin-top: 1.5rem;
+}
+.pub > a {
+    color:rgb(0, 204, 255);
+}
+
+.pub > a:hover {
+    color: rgb(10, 98, 192);
+}
+.pub > p {
+    text-align: justify;
+}
+.pub > h3 {
+    text-align: justify;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.pidiv > img {
+    width: 15rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Hamburger menu styles - hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile hamburger navigation - add this inside your existing @media screen and (max-width: 768px) */
+
+
+/* ========== RESPONSIVE CSS MEDIA QUERIES ========== */
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 1.5rem 8rem;
+    }
     
+    #hero {
+        padding: 2rem 8rem;
+    }
+    
+    #hero > h1 {
+        font-size: 35px;
+    }
+    
+    .thrustsdiv {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .thrust {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+    
+    #pubdiv {
+        grid-template-columns: 48% 48%;
+        gap: 1rem;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem 2rem;
+    }
+    
+    #hero {
+        padding: 2rem 2rem;
+    }
+    
+    #hero > h1 {
+        font-size: 28px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #hero > h3 {
+        font-size: 16px;
+    }
+    
+    .heroimg {
+        height: 60vh;
+    }
+    
+    #otherpages {
+        height: 25vh;
+    }
+    
+    /* Hamburger Navigation - FIXED */
+    #navbar {
+        position: relative;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+    }
+    
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .navlinks.active {
+        display: flex;
+    }
+    
+    .navlinks > a {
+        padding: 1rem 2rem;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navlinks > a:last-child {
+        border-bottom: none;
+    }
+    
+    .navscroll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 204, 255);
+        height: 1rem;
+        width: 1.5rem;
+    }
+    
+    .navscroll img {
+        height: 1rem;
+        width: 1.5rem;
+    }
+    
+    /* Typography */
+    h2 {
+        font-size: 16px;
+        padding-bottom: 1rem;
+    }
+    
+    #home > p {
+        line-height: 1.4rem;
+        text-align: left;
+    }
+    
+    /* Thrusts section */
+    .thrustsdiv {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .thrust {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .thrust > h3 {
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .thrust > p {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .thrustpublications > p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    
+    .funding {
+        word-spacing: normal;
+        margin-top: 1.5rem;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    /* Publications grid */
+    #pubdiv {
+        display: block;
+    }
+    
+    .pub {
+        margin-top: 1rem;
+        padding: 0.8rem;
+    }
+    
+    .pub > p {
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left;
+    }
+    
+    .pub > h3 {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+    
+    .pub > h4 {
+        font-size: 0.9rem;
+    }
+    
+    /* Team section */
+    #teamdiv {
+        text-align: center;
+    }
+    
+    .pidiv > img {
+        width: 12rem;
+        max-width: 100%;
+    }
+    
+    .pidiv > h2,
+    .phddiv > h2,
+    .mastersdiv > h2 {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem 1rem;
+    }
+    
+    #hero {
+        padding: 1.5rem 1rem;
+    }
+    
+    #hero > h1 {
+        font-size: 24px;
+    }
+    
+    #hero > h3 {
+        font-size: 14px;
+    }
+    
+    .heroimg {
+        height: 50vh;
+    }
+    
+    #otherpages {
+        height: 20vh;
+    }
+    
+    .navlinks {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .navlinks > a {
+        padding: 0.8rem;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+    
+    .thrust > p,
+    .funding {
+        font-size: 13px;
+    }
+    
+    .pub {
+        padding: 0.6rem;
+    }
+    
+    .pub > p {
+        font-size: 13px;
+    }
+    
+    .pub > h3 {
+        font-size: 0.8rem;
+    }
+    
+    .pidiv > img {
+        width: 10rem;
+    }
 }
