@@ -16,6 +16,11 @@
     </section>
     <section>
         <div class="container" id="navbar">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="navlinks">
                 <a href="./index.html">Home</a>
                 <a href="./thrusts.html">Thrusts</a>
@@ -25,7 +30,7 @@
                 <a href="opportunities.html">Opportunities</a>
             </div>
             <div class="navscroll">
-                <img src="./Images/down arrow.svg" alt="An arrow pointing down">
+                <a href="#footer"><img src="./Images/down arrow.svg" alt="An arrow pointing down"></a>
             </div>
         </div>
     </section>
@@ -48,5 +53,18 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.navlinks');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+        </script>
 </body>
 </html>

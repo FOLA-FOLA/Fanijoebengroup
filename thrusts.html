@@ -17,6 +17,11 @@
     </section>
     <section>
         <div class="container" id="navbar">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="navlinks">
                 <a href="./index.html">Home</a>
                 <a href="./thrusts.html">Thrusts</a>
@@ -79,5 +84,18 @@
         </div>
     </section>
     <div id="footer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.navlinks');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+        </script>
 </body>
 </html>
