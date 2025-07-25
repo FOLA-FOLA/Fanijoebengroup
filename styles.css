@@ -5,6 +5,9 @@ body {
     font-family: Lato, Helvetica, system-ui;
     background-color: white;
 }
+a {
+    cursor: crosshair;
+}
 #navbar {
     position: sticky;
     background-color: rgb(255, 255, 255);
@@ -354,7 +357,6 @@ a {
         text-align: left;
         font-size: 14px;
         line-height: 1.4;
-        text-align: justify;
     }
     
     .thrustpublications > p {
